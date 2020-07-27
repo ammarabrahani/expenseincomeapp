@@ -10,12 +10,16 @@ export const AddTransaction = () => {
   const onSubmit = e => {
     e.preventDefault();
 
+    
     const newTransaction = {
-      id: Math.floor(Math.random() * 100000000),
+      //id: Math.floor(Math.random() * 100000000),
+      id: new Date().getTime(),
+
       text,
       amount: +amount
     }
-
+    setText('');
+    setAmount('');
     addTransaction(newTransaction);
   }
 
