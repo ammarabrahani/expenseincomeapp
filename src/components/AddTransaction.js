@@ -10,7 +10,10 @@ export const AddTransaction = () => {
   const onSubmit = e => {
     e.preventDefault();
 
-    
+    if (Number(amount) === 0) {
+      alert("Please Enter correct value");
+      return false;
+  }
     const newTransaction = {
       //id: Math.floor(Math.random() * 100000000),
       id: new Date().getTime(),
