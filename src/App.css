@@ -17,14 +17,15 @@ body {
   min-height: 100vh;
   margin: 0;
   font-family: 'Lato', sans-serif;
-  background-image: url('images/photo.jpeg') no-repeat center center fixed;
+  background-image: url("images/photo.jpeg") no-repeat center center fixed;
+
 }
 
 .container {
   margin: 30px auto;
   width: 350px;
   background-color: rgba(203, 205, 226, 0.993);
-}
+  }
 
 h1 {
   letter-spacing: 1px;
@@ -84,7 +85,7 @@ label {
 
 input[type='text'],
 input[type='number'] {
-  border: 1px solid #dedede;
+  border: 1px solid #b0b0ce;
   border-radius: 2px;
   display: block;
   font-size: 16px;
@@ -134,6 +135,13 @@ input[type='number'] {
 .list li.minus {
   border-right: 5px solid #c7200e;
 }
+.list li:hover.plus{
+  background-color: #a7a7cf;
+} 
+
+.list li:hover.minus{
+  background-color: #c87b72;
+}
 
 .delete-btn {
   cursor: pointer;
@@ -153,9 +161,10 @@ input[type='number'] {
 
 .list li:hover .delete-btn {
   opacity: 1;
+  background-color: #a7a7cf;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 250px) {
   .container {
     width: 300px;
   }
